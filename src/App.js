@@ -11,6 +11,7 @@ function App() {
       </div>
       <br></br>
       
+      {/** SEARCH BAR*/}
       <div class="container">
         <input type="text" name="text" class="input" placeholder="Search"></input>
         <button class="search__btn">
@@ -19,6 +20,7 @@ function App() {
         </svg>
         </button>
       </div>
+      {/** SEARCH BAR*/}
         
     </div>
     
