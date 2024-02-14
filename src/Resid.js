@@ -12,27 +12,27 @@ import res5Image from './res5.jpg';
 
 const residencesData = [
   {
-    name: 'Modern Oasis',
+    name: 'Grand Logde',
     description: 'A sleek and modern residence with stunning views.',
     imageUrl: res1Image,
   },
   {
-    name: 'Cozy Cottage',
+    name: 'Poynton House',
     description: 'Charming cottage surrounded by nature for a tranquil living experience.',
     imageUrl: res2Image,
   },
   {
-    name: 'Urban Loft',
+    name: 'Lonsdale Hotel',
     description: 'Spacious loft in the heart of the city with contemporary design.',
     imageUrl: res3Image,
   },
   {
-    name: 'Cozy Cottage',
+    name: '120 Clarance',
     description: 'Charming cottage surrounded by nature for a tranquil living experience.',
     imageUrl: res4Image,
   },
   {
-    name: 'Urban Loft',
+    name: 'Floradine',
     description: 'Spacious loft in the heart of the city with contemporary design.',
     imageUrl: res5Image,
   },
