@@ -1,42 +1,29 @@
 // TabMenu.js
 import React from 'react';
 import { Link, Route, Routes, Outlet, useParams } from 'react-router-dom';
-
-const Tab1 = () => {
-  return <div>Content for Tab 1</div>;
-};
-
-const Tab2 = () => {
-  return <div>Content for Tab 2</div>;
-};
-
-const Tab3 = () => {
-  return <div>Content for Tab 3</div>;
-};
+import {firestore} from './firebase-config';
 
 const TabMenu = () => {
+ 
+    const collectionRef = firestore.collection('Res'); // Replace 'your_collection_name' with the actual collection name
+
+    collectionRef.add({
+      name: 'John Doe',
+      age: 25,
+      city: 'New York'
+    })
+    .then(docRef => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch(error => {
+      console.error('Error adding document: ', error);
+    });
+  
+
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="tab1">Tab 1</Link>
-          </li>
-          <li>
-            <Link to="tab2">Tab 2</Link>
-          </li>
-          <li>
-            <Link to="tab3">Tab 3</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Routes>
-        <Route path="tab1" element={<Tab1 />} />
-        <Route path="tab2" element={<Tab2 />} />
-        <Route path="tab3" element={<Tab3 />} />
-        <Route path="/" element={<Outlet />} />
-      </Routes>
+      <h1>Your React Component</h1>
+      <button onClick={TabMenu}>Add Document</button>
     </div>
   );
 };
