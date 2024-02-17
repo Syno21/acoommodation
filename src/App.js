@@ -1,35 +1,26 @@
-import React from 'react';
+import './App.css'
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import Home from './Home'; // Import the Home component
-import Resid from './Resid'; // Import the Resid component
-import TabMenu from './TabMenu'; // Import the TabMenu component
+import Home from './Home'; 
+import Resid from './Resid'; 
+import TabMenu from './TabMenu';
+import Nava from './Navbr';
+
 
 function App() {
-  return (
+  return(
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/resid">Resid</Link>
-            </li>
-            <li>
-              <Link to="/tabmenu">TabMenu</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <Nava />
+      <main className='main-content'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resid" element={<Resid />} />
           <Route path="/tabmenu" element={<TabMenu />} />
         </Routes>
-      </div>
+      </main>
     </Router>
   );
+  
 }
 
 export default App;
