@@ -25,16 +25,16 @@ const Navbr = () => {
               <NavLink to="/" onClick={toggleNavItems}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/Resid" onClick={toggleNavItems}>Blog</NavLink>
+              <NavLink to="/Resid" onClick={toggleNavItems}>Residences</NavLink>
             </li>
             <li>
-              <NavLink to="/TabMenu" onClick={toggleNavItems}>Projects</NavLink>
+              <NavLink to="/TabMenu" onClick={toggleNavItems}></NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/ResidenceForm">Admin</NavLink>
             </li>
           </ul>
         </div>
