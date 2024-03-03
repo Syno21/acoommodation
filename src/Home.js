@@ -9,6 +9,7 @@ import { collection, doc, getDocs } from 'firebase/firestore';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
+
 //FETCHING DATA AND IMAGES FROM FIRESTORE//
 async function fetchDataFromFirestore() {
     const querySnapshot = await getDocs(collection(db, "residences"));
@@ -353,7 +354,6 @@ function App() {
         </div>
 
         <div className='Wrap'>
-        
         
         </div>
     <br></br>
