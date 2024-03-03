@@ -306,8 +306,8 @@ function App() {
                     </svg>
                     </div>
                     <div className="text">
-                    <div className="text_m">Name: {user.residenceName}</div>
-                    <div className="text_s">Descreption{user.residenceDescription}</div>
+                    <div className="text_m">{user.residenceName}</div>
+                    <div className="text_s">{user.residenceDescription}</div>
                     </div>
                 </div>
                 <div className="btns">
