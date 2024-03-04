@@ -36,6 +36,7 @@ function App() {
   //FETCHING DATA AND IMAGES FROM FIRESTORE inside function//  
     
     const [userData, setUserData] = useState([]);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
         async function fetchData(){
@@ -60,7 +61,8 @@ function App() {
       ))} */}
       {/** SEARCH BAR*/}
       <div className="contoir">
-        <input type="text" name="text" className="input" placeholder="Search"></input>
+        <input type="text" name="text" className="input" placeholder="Search"
+        onChange={(e) => setSearch(e.target.value)} ></input>
         <button className="search__btn">
         <FontAwesomeIcon icon={faSearch} />
         </button>
@@ -75,7 +77,13 @@ function App() {
       <div className='Wrap'>
         {/**Card 1 */}
         
-        {userData.map((user) => (
+        {userData && userData.length > 0 && (
+  userData
+    .filter((user) => {
+      const residenceName = user.residenceName || '';
+      return search.toLowerCase() === '' ? true : residenceName.toLowerCase().includes(search);
+    })
+    .map((user) => (
         <div className='onit' key={user.id}>
             <div className="main">
                 <div className="card">
@@ -328,7 +336,7 @@ function App() {
                 </div>
             </div>
         </div> 
-      ))}
+      )))}
     
     </div>
     {/**Card 2 */}
